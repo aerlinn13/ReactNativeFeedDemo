@@ -1,0 +1,86 @@
+{
+    "status": "success",
+    "message": "Listed successfully",
+    "data": [
+        {
+            "type": "offer",
+            "is_favourited": 0,
+            "image": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/privileges/FgoCV42Vo7ST1CvstgphVEr92O-K27zb_crop.png",
+            "title": "Model Village - LFW",
+            "subtitle": "Tuesday 08:00am - 10:30pm",
+            "campaign": null,
+            "offer": {
+                "id": 37,
+                "location": {
+                    "short_address": "2-4 Cockspur St, London SW1Y 5BQ, UK",
+                    "distance": "11.07",
+                    "walking_time": "30+ min walk"
+                },
+                "tags": [
+                    "#model_village"
+                ],
+                "is_redeemed": 1,
+                "latest_redeem_date": "03/05/18"
+            }
+        },
+        {
+            "type": "campaign",
+            "is_favourited": 0,
+            "image": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/campaignheroimage/resize/uIBBiRm_KbISii_tP887et_DJ4TqCizS.png",
+            "title": "Spotify 10000",
+            "subtitle": "technology",
+            "campaign": {
+                "id": 126,
+                "brand_logo": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/campaignlogoimage/hQ4dBRa8Kz7cqLvtTtbezXglAYdXXRuT.jpg"
+            },
+            "offer": null
+        },
+        {
+            "type": "campaign",
+            "is_favourited": 1,
+            "image": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/campaignheroimage/resize/y6RTU74XoSme787JRH4Q1oYzYj9hrr0Q.png",
+            "title": "Spotify date check",
+            "subtitle": "health & wellness",
+            "campaign": {
+                "id": 141,
+                "brand_logo": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/campaignlogoimage/sIXBMfp-CbOkOVAmEqZ44k4PZaoYMpSX.jpg"
+            },
+            "offer": null
+        },
+        {
+            "type": "campaign",
+            "is_favourited": 0,
+            "image": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/campaignheroimage/resize/Sq-ISAlsXYUpIXj4SuAvGalXnzfvZwLB.jpg",
+            "title": "Comp test",
+            "subtitle": "art",
+            "campaign": {
+                "id": 137,
+                "brand_logo": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/campaignlogoimage/sIXBMfp-CbOkOVAmEqZ44k4PZaoYMpSX.jpg"
+            },
+            "offer": null
+        },
+        {
+            "type": "offer",
+            "is_favourited": 0,
+            "image": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/privileges/jtdUS16yo7dem1zFTqvxG6KyzwIuUyWj_crop.jpg",
+            "title": "Free cage with every bird",
+            "subtitle": "Tuesday 08:00am - 10:30pm",
+            "campaign": null,
+            "offer": {
+                "id": 36,
+                "location": {
+                    "short_address": "Liongate Capital Mangement, 23 Great Pulteney St, Soho, London W1F 9NH, UK",
+                    "distance": "11.38",
+                    "walking_time": "30+ min walk"
+                },
+                "tags": [
+                    "#cage",
+                    "#air",
+                    "#free"
+                ],
+                "is_redeemed": 1,
+                "latest_redeem_date": "02/28/18"
+            }
+        }
+    ]
+}

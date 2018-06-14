@@ -1,0 +1,66 @@
+{
+    "status": "success",
+    "message": "Privilege details",
+    "data": {
+        "privilege_id": "36",
+        "title": "Free cage with every bird",
+        "brand": "Conair",
+        "description": "Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. Buy a bird, get a free cage. ",
+        "image": "https://s3.eu-west-2.amazonaws.com/media-modelvillage/uploads/privileges/jtdUS16yo7dem1zFTqvxG6KyzwIuUyWj_crop.jpg",
+        "latitude": "51.5126265",
+        "longitude": "-0.13668759999995928",
+        "location": "Liongate Capital Mangement, 23 Great Pulteney St, Soho, London W1F 9NH, UK",
+        "website": "http://google.com",
+        "phone": "07849546621",
+        "favorite": "0",
+        "redemption_terms": "https://stagingadmin.modelvillage.co/privileges/MzY=/redemption-terms",
+        "location_title": "London",
+        "hashtags": [
+            "#cage",
+            "#air",
+            "#free"
+        ],
+        "open_hours": [
+            {
+                "day": "monday",
+                "open": "15:00",
+                "close": "22:30",
+                "is_open": 1
+            },
+            {
+                "day": "tuesday",
+                "open": "08:00",
+                "close": "22:30",
+                "is_open": 1
+            },
+            {
+                "day": "wednesday",
+                "open": "08:00",
+                "close": "22:30",
+                "is_open": 1
+            },
+            {
+                "day": "thursday",
+                "open": "08:00",
+                "close": "22:30",
+                "is_open": 1
+            },
+            {
+                "day": "friday",
+                "open": "08:00",
+                "close": "22:30",
+                "is_open": 1
+            },
+            {
+                "day": "saturday",
+                "is_open": 0
+            },
+            {
+                "day": "sunday",
+                "is_open": 0
+            }
+        ],
+        "holiday_open": 1,
+        "today": "08:00 to 22:30"
+    }
+}
