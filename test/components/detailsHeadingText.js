@@ -12,6 +12,7 @@ export default class DetailsHeadingText extends React.PureComponent {
 
   constructor(props) {
     super(props);
+    console.log(props)
   }
 
   render(){
@@ -32,14 +33,14 @@ const horizontalPosition = 30;
 const styles = StyleSheet.create({
   infoHeader:{
     fontFamily:Font,
-    fontWeight:'bold', 
-    fontSize:normalize(30), 
-    color:TitleFontColor, 
+    fontWeight:'bold',
+    fontSize:normalize(30),
+    color:TitleFontColor,
     backgroundColor:'transparent'
   },
   time :{
     fontFamily:Font,
-    color:FontColor, 
+    color:FontColor,
     fontSize:normalize(16),
     marginTop:10
   },

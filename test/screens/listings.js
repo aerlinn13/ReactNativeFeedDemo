@@ -28,7 +28,7 @@ export default class Listings extends React.PureComponent {
       loading: true,
       data: [],
       error: null
-    };  
+    };
   }
 
   async componentDidMount(){
@@ -49,8 +49,8 @@ export default class Listings extends React.PureComponent {
     }
   }
 
-  _navigateToPerkDetails(subTitle){
-    this.props.navigation.navigate("perkDetails", {subTitle:subTitle});
+  _navigateToPerkDetails(index){
+    this.props.navigation.navigate("perkDetails", {data: this.state.data[index]});
   }
 
   _favourited(index, isFavourited){
@@ -69,7 +69,7 @@ export default class Listings extends React.PureComponent {
   }
 
   render() {
-    
+
     if(this.state.loading){
       return <Loading />;
     }

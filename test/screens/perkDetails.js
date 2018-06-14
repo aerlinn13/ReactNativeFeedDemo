@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetListings } from '../clients/apiClient';
+import { GetListings, GetListing } from '../clients/apiClient';
 import normalize from "react-native-elements/src/helpers/normalizeText";
 import { FontColor, TitleFontColor, MainBgColor, Font } from '../styles/globalStyles';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -8,7 +8,6 @@ import InfoList from '../components/infoList';
 import Loading  from '../components/loading';
 import DetailsHeadingText from '../components/detailsHeadingText';
 import OpeningTimesListItem from '../components/openingTimesListItem';
-import { GetListing } from '../clients/apiClient';
 import {
   StyleSheet,
   Text,
@@ -39,9 +38,9 @@ export default class PerkDetails extends React.PureComponent {
     this.state = {
       loading: true,
       data: [],
-      openingTimesDataLength:0,
-      openingTimesData:[]
-    };  
+      openingTimesDataLength: 0,
+      openingTimesData: []
+    };
 
   }
 
@@ -52,10 +51,10 @@ export default class PerkDetails extends React.PureComponent {
     if(listing.status === 'success') {
       this.setState(
         {
-          loading:false,
-          openingTimesDataLength : listing.data.open_hours.length -1,
-          openingTimesData:listing.data.open_hours,
-          data:listing.data
+          loading: false,
+          openingTimesDataLength: listing.data.open_hours.length -1,
+          openingTimesData: listing.data.open_hours,
+          data: listing.data
         }
       );
       this._selectOpeningTime(0);
@@ -107,17 +106,16 @@ export default class PerkDetails extends React.PureComponent {
 
     return <OpeningTimesListItem {...item} />
   }
-  
+
   render() {
 
     const { navigation } = this.props;
     const { goBack } = navigation;
 
-    let headingsData = {
-      subTitle:navigation.getParam('subTitle', 'Tuesday 08:00am - 10:30pm'),
-      title:this.state.data.title
+    let venueData = {
+      data: navigation.getParam('data'),
     };
-
+    console.log(venueData.data)
     if(this.state.loading){
         return <Loading />;
     }
@@ -127,9 +125,9 @@ export default class PerkDetails extends React.PureComponent {
             <StatusBar barStyle="light-content"/>
             <ScrollView style={styles.scrollView}>
               <View>
-                  <Image 
-                    style={[styles.heroImage, { height: imageHeight,width:windowWidth }]} 
-                    source={{ uri:this.state.data.image }} 
+                  <Image
+                    style={[styles.heroImage, { height: imageHeight,width:windowWidth }]}
+                    source={{ uri: venueData.data.image }}
                   />
               </View>
               <View>
@@ -140,7 +138,7 @@ export default class PerkDetails extends React.PureComponent {
                 <Image source={require('../static/imageSlice.png')} style={{width:windowWidth, height:imageHeight / normalize(2)}}></Image>
               </View>
               <View style={styles.infoContainer}>
-                <DetailsHeadingText {...headingsData} />
+                <DetailsHeadingText {...venueData.data} />
                 <InfoList />
                 <Text style={styles.subTitle}>OPENING TIMES</Text>
                 <FlatList
@@ -164,24 +162,24 @@ export default class PerkDetails extends React.PureComponent {
 const perkDetailsHorizontalPosition = 40;
 
 const styles = StyleSheet.create({
-  container : { 
-    flex:1, 
-    backgroundColor: MainBgColor 
+  container : {
+    flex:1,
+    backgroundColor: MainBgColor
   },
-  scrollView:{ 
-    flex:1 
+  scrollView:{
+    flex:1
   },
-  heroImage:{ 
-     position: 'absolute', 
-     top:0, 
-     left:0 
+  heroImage:{
+     position: 'absolute',
+     top:0,
+     left:0
   },
   backIcon:{
     position:'absolute',
     left:10
   },
   overlayContainer: {
-    flex:1, 
+    flex:1,
     marginTop:95
   },
   infoContainer:{

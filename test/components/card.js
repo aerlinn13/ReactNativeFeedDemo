@@ -4,22 +4,22 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import normalize from "react-native-elements/src/helpers/normalizeText";
 import { FontColor, TitleFontColor, MainBgColor, Font, HighlightContentColor } from '../styles/globalStyles';
 
-import { 
-    View, 
-    Text, 
-    StyleSheet, 
+import {
+    View,
+    Text,
+    StyleSheet,
     Image,
     TouchableOpacity
 } from 'react-native';
 
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Class RCTCxxModule','Module RCTImageLoader requires']);
-//supressed warning that needs further investigation 
+//supressed warning that needs further investigation
 
 export default class Card extends React.PureComponent {
 
     constructor(props) {
-        super(props); 
+        super(props);
     }
 
     _favourite = (props) => {
@@ -58,7 +58,7 @@ export default class Card extends React.PureComponent {
                     {this._favourite(this.props)}
                 </View>
                 <View style={styles.contentContainer}>
-                    <TouchableOpacity style={styles.perk} onPress={() => this.props.navigateToPerkDetails(this.props.subtitle)}>
+                    <TouchableOpacity style={styles.perk} onPress={() => this.props.navigateToPerkDetails(this.props.index)}>
                         <Text style={styles.perkText}>PERK</Text>
                     </TouchableOpacity>
                     <Text style={styles.title}>{this.props.title}</Text>
@@ -72,62 +72,62 @@ export default class Card extends React.PureComponent {
 
 const styles = StyleSheet.create({
     cardContainer: {
-        flex:1, 
+        flex:1,
         padding:10,
         paddingBottom:5
     },
-    featureImage: { 
+    featureImage: {
         height:200
     },
     contentContainer: {
-        backgroundColor:MainBgColor, 
-        padding:20, 
-        paddingBottom:30, 
-        borderBottomLeftRadius:10, 
+        backgroundColor:MainBgColor,
+        padding:20,
+        paddingBottom:30,
+        borderBottomLeftRadius:10,
         borderBottomRightRadius:10,
         marginTop:-10
     },
     title:{
-        fontFamily:Font, 
-        fontSize:normalize(18), 
-        color:TitleFontColor, 
+        fontFamily:Font,
+        fontSize:normalize(18),
+        color:TitleFontColor,
         fontWeight:'bold',
         marginTop:15
     },
     subtitle:{
-        fontFamily:Font, 
-        fontSize:normalize(13), 
-        color:FontColor, 
+        fontFamily:Font,
+        fontSize:normalize(13),
+        color:FontColor,
         marginTop:5
     },
     favourite:{
-        position:'absolute', 
-        top:30, 
+        position:'absolute',
+        top:30,
         right:30
     },
     walkingTime:{
-        fontFamily:Font, 
-        fontSize:normalize(13), 
-        color:FontColor, 
-        marginLeft:10, 
+        fontFamily:Font,
+        fontSize:normalize(13),
+        color:FontColor,
+        marginLeft:10,
         marginTop:5
     },
     offerContainer:{
-        flexDirection:"row", 
+        flexDirection:"row",
         marginTop:20
     },
     perk:{
-        position:'absolute', 
-        right:10, 
-        top:10, 
-        paddingHorizontal:20, 
-        paddingVertical:5, 
-        borderWidth:1, 
-        borderColor:HighlightContentColor, 
-        
+        position:'absolute',
+        right:10,
+        top:10,
+        paddingHorizontal:20,
+        paddingVertical:5,
+        borderWidth:1,
+        borderColor:HighlightContentColor,
+
     },
     perkText: {
-        color:FontColor, 
+        color:FontColor,
         fontSize:normalize(8)
     }
 });
